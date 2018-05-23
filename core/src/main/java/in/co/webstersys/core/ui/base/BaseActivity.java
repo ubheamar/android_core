@@ -1,5 +1,7 @@
 package in.co.webstersys.core.ui.base;
 
+import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -11,16 +13,19 @@ import android.widget.Toast;
 
 import in.co.webstersys.core.R;
 
-public abstract class BaseActivity<DB extends ViewDataBinding> extends AppCompatActivity {
+public abstract class BaseActivity<DB extends ViewDataBinding,VM extends ViewModel> extends AppCompatActivity {
    @LayoutRes
    protected abstract int getLayoutRes();
+   public abstract Class<VM> getViewModel();
    protected DB dataBinding;
+   protected VM viewModel;
    protected Toolbar toolbar;
 
    @Override
    protected void onCreate(@Nullable Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       dataBinding = DataBindingUtil.setContentView(this, getLayoutRes());
+      viewModel = ViewModelProviders.of(this).get(getViewModel());
       setupToolbar();
    }
 
