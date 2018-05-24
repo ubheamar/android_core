@@ -2,6 +2,7 @@ package in.co.webstersys.core.ui.base;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import in.co.webstersys.core.R;
+
 
 public abstract class BaseActivity<DB extends ViewDataBinding,VM extends ViewModel> extends AppCompatActivity {
    @LayoutRes
@@ -42,4 +44,6 @@ public abstract class BaseActivity<DB extends ViewDataBinding,VM extends ViewMod
       if(message!=null)
          Toast.makeText(this, message, Toast.LENGTH_LONG).show();
    }
+
+
 }

@@ -35,6 +35,7 @@ dependencies {
     implementation deps.support.app_compat
     implementation deps.lifecycle.runtime
     implementation deps.lifecycle.extensions
+
     testImplementation deps.junit
     androidTestImplementation deps.atsl.runner
     androidTestImplementation deps.espresso.core

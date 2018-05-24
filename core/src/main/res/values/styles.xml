@@ -2,4 +2,19 @@
     <style name="CoreDarkTheme" parent="Theme.AppCompat.NoActionBar" >
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:padding">10dp</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+    <style name="RedButton" parent="Button">
+        <item name="colorButtonNormal">@color/youtube_button_color</item>
+    </style>
+    <style name="TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@string/font_regular</item>
+    </style>
+    <style name="HeadLine" parent="TextAppearance.AppCompat.Headline">
+
+    </style>
+
 </resources>

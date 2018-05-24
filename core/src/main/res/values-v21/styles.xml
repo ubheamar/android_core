@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RedButton" parent="Button">
+        <item name="android:colorButtonNormal">@color/youtube_button_color</item>
+    </style>
+</resources>
