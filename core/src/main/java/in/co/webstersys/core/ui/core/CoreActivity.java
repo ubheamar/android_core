@@ -1,8 +1,7 @@
-package in.co.webstersys.core.ui.base;
+package in.co.webstersys.core.ui.core;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
-import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -15,7 +14,7 @@ import android.widget.Toast;
 import in.co.webstersys.core.R;
 
 
-public abstract class BaseActivity<DB extends ViewDataBinding,VM extends ViewModel> extends AppCompatActivity {
+public abstract class CoreActivity<DB extends ViewDataBinding,VM extends ViewModel> extends AppCompatActivity {
    @LayoutRes
    protected abstract int getLayoutRes();
    public abstract Class<VM> getViewModel();
