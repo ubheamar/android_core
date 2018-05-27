@@ -16,7 +16,7 @@ versions.mockito_all = "1.10.19"
 versions.atsl_runner = "1.0.1"
 versions.atsl_rules = "1.0.1"
 versions.calligraphy = "2.3.0"
-
+versions.paging = "1.0.0-alpha6"
 
 def deps = [:]
 
@@ -72,7 +72,7 @@ deps.junit = "junit:junit:$versions.junit"
 deps.mock_web_server = "com.squareup.okhttp3:mockwebserver:$versions.mockwebserver"
 
 deps.calligraphy = "uk.co.chrisjenx:calligraphy:$versions.calligraphy"
-
+deps.paging = "android.arch.paging:runtime:$versions.paging"
 
 
 

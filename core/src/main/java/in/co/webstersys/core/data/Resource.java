@@ -7,10 +7,7 @@ import static in.co.webstersys.core.data.Status.ERROR;
 import static in.co.webstersys.core.data.Status.LOADING;
 import static in.co.webstersys.core.data.Status.SUCCESS;
 
-/**
- * A generic class that holds a value with its loading status.
- * @param <T>
- */
+
 public class Resource<T> {
     @NonNull
     public final Status status;
