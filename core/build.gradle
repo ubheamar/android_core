@@ -46,3 +46,6 @@ dependencies {
     androidTestImplementation deps.espresso.core
 
 }
+tasks.withType(Javadoc) {
+    enabled = false
+}
