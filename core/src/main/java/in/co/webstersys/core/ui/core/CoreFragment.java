@@ -32,4 +32,6 @@ public abstract class CoreFragment<DB extends ViewDataBinding,VM extends ViewMod
         dataBinding = DataBindingUtil.inflate(inflater, getLayoutRes(), container, false);
         return dataBinding.getRoot();
     }
+
+
 }

@@ -2,6 +2,7 @@ package in.co.webstersys.core.ui.core;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import in.co.webstersys.core.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
 public abstract class CoreActivity<DB extends ViewDataBinding,VM extends ViewModel> extends AppCompatActivity {
@@ -44,5 +46,8 @@ public abstract class CoreActivity<DB extends ViewDataBinding,VM extends ViewMod
          Toast.makeText(this, message, Toast.LENGTH_LONG).show();
    }
 
-
+   @Override
+   protected void attachBaseContext(Context newBase) {
+      super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+   }
 }
