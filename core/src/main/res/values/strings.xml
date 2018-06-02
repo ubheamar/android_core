@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">core</string>
+    <string name="font" tools:ignore="ReferenceType">@font/steagal</string>
     <string name="font_regular" tools:ignore="ReferenceType">@font/steagal_regular</string>
     <string name="font_bold" tools:ignore="ReferenceType">@font/steagal_bold</string>
     <string name="font_med" tools:ignore="ReferenceType">@font/steagal_med</string>
