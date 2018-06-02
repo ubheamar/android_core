@@ -1,6 +1,7 @@
 package in.co.webstersys.core.ui.core;
 
 import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
@@ -12,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
+import javax.inject.Inject;
+
 import in.co.webstersys.core.R;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -19,6 +22,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public abstract class CoreActivity<DB extends ViewDataBinding,VM extends ViewModel> extends AppCompatActivity {
    @LayoutRes
    protected abstract int getLayoutRes();
+   @Inject
+   protected ViewModelProvider.Factory viewModelFactory;
    public abstract Class<VM> getViewModel();
    protected DB dataBinding;
    protected VM viewModel;
@@ -28,7 +33,7 @@ public abstract class CoreActivity<DB extends ViewDataBinding,VM extends ViewMod
    protected void onCreate(@Nullable Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       dataBinding = DataBindingUtil.setContentView(this, getLayoutRes());
-      viewModel = ViewModelProviders.of(this).get(getViewModel());
+      viewModel = ViewModelProviders.of(this,viewModelFactory).get(getViewModel());
       setupToolbar();
    }
 

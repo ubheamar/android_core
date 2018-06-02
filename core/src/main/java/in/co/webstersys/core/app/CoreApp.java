@@ -25,7 +25,6 @@ public class CoreApp extends Application implements HasActivityInjector {
                 .build());
     }
     private void initializeComponent() {
-
         DaggerCoreComponent.builder()
                 .application(this)
                 .build()

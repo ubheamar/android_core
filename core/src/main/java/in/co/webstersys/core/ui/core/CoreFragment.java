@@ -1,6 +1,7 @@
 package in.co.webstersys.core.ui.core;
 
 import android.arch.lifecycle.ViewModel;
+import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
@@ -13,9 +14,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import javax.inject.Inject;
+
 public abstract class CoreFragment<DB extends ViewDataBinding,VM extends ViewModel> extends Fragment {
     @LayoutRes
     protected abstract int getLayoutRes();
+    @Inject
+    protected ViewModelProvider.Factory viewModelFactory;
     public abstract Class<VM> getViewModel();
     protected DB dataBinding;
     protected VM viewModel;
@@ -23,7 +28,7 @@ public abstract class CoreFragment<DB extends ViewDataBinding,VM extends ViewMod
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel = ViewModelProviders.of(this).get(getViewModel());
+        viewModel = ViewModelProviders.of(this,viewModelFactory).get(getViewModel());
     }
 
     @Nullable
