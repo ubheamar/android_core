@@ -17,6 +17,7 @@ versions.atsl_runner = "1.0.1"
 versions.atsl_rules = "1.0.1"
 versions.calligraphy = "2.3.0"
 versions.paging = "1.0.0-alpha6"
+versions.dagger = "2.12"
 
 def deps = [:]
 
@@ -51,6 +52,14 @@ espresso.core = "com.android.support.test.espresso:espresso-core:$versions.espre
 espresso.contrib = "com.android.support.test.espresso:espresso-contrib:$versions.espresso"
 espresso.intents = "com.android.support.test.espresso:espresso-intents:$versions.espresso"
 deps.espresso = espresso
+
+def dagger = [:]
+dagger.runtime = "com.google.dagger:dagger:$versions.dagger"
+dagger.android = "com.google.dagger:dagger-android:$versions.dagger"
+dagger.android_support = "com.google.dagger:dagger-android-support:$versions.dagger"
+dagger.compiler = "com.google.dagger:dagger-compiler:$versions.dagger"
+dagger.android_support_compiler = "com.google.dagger:dagger-android-processor:$versions.dagger"
+deps.dagger = dagger
 
 def atsl = [:]
 atsl.runner = "com.android.support.test:runner:$versions.atsl_runner"

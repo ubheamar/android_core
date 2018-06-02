@@ -9,5 +9,5 @@
     <color name="cyan_500">#00BCD4</color>
     <color name="light_blue_500">#03A9F4</color>
     <color name="youtube_button_color">#d7390c</color>
-
+    <color name="white">#FFFFFF</color>
 </resources>
