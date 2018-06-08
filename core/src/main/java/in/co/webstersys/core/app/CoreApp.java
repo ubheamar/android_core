@@ -20,7 +20,7 @@ public class CoreApp extends Application implements HasActivityInjector {
         super.onCreate();
         initializeComponent();
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath(getString(R.string.font_regular))
+                .setDefaultFontPath(getString(R.string.font))
                 .setFontAttrId(R.attr.fontPath)
                 .build());
     }
