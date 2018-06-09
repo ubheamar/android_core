@@ -96,8 +96,9 @@ ext.build_versions = build_versions
 
 def addRepos(RepositoryHandler handler) {
     handler.mavenCentral()
-    handler.jcenter()
     handler.google()
+    handler.jcenter()
+
 
 }
 ext.addRepos = this.&addRepos
