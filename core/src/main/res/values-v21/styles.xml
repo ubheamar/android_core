@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <style name="CoreLightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="fontFamily">@string/font</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="titleTextAppearance">@style/Title</item>
+        <item name="android:subtitleTextAppearance">@style/Subhead</item>
+    </style>
     <style name="RedButton" parent="Button">
         <item name="android:colorButtonNormal">@color/youtube_button_color</item>
     </style>

@@ -2,7 +2,73 @@
     <style name="CoreDarkTheme" parent="Theme.AppCompat.NoActionBar" >
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="CoreLightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="fontFamily">@string/font</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="titleTextAppearance">@style/Title</item>
+        <item name="subtitleTextAppearance">@style/Subhead</item>
+    </style>
+    <style name="Display4" parent="TextAppearance.AppCompat.Display4">
+        <item name="android:fontFamily">@string/font_light</item>
+        <item name="android:textSize">112sp</item>
+    </style>
+    <style name="Display3" parent="TextAppearance.AppCompat.Display3">
+        <item name="android:fontFamily">@string/font</item>
+        <item name="android:textSize">56sp</item>
+    </style>
+    <style name="Display2" parent="TextAppearance.AppCompat.Display2">
+        <item name="android:fontFamily">@string/font</item>
+        <item name="android:textSize">45sp</item>
+    </style>
+    <style name="Display1" parent="TextAppearance.AppCompat.Display1">
+        <item name="android:fontFamily">@string/font</item>
+        <item name="android:textSize">34sp</item>
+    </style>
+    <style name="HeadLine" parent="TextAppearance.AppCompat.Headline">
+        <item name="android:fontFamily">@string/font</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="Title" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@string/font_medium</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="TitleInverse" parent="TextAppearance.AppCompat.Title.Inverse">
+        <item name="android:fontFamily">@string/font_medium</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="Subhead" parent="TextAppearance.AppCompat.Subhead">
+        <item name="android:fontFamily">@string/font</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="SubheadInverse" parent="TextAppearance.AppCompat.Subhead.Inverse">
+        <item name="android:fontFamily">@string/font</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Body1" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@string/font</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Body2" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:fontFamily">@string/font_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Caption" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@string/font</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Menu" parent="TextAppearance.AppCompat.Menu">
+        <item name="android:fontFamily">@string/font_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="ButtonTextAppearance" parent="TextAppearance.AppCompat.Button">
+        <item name="android:fontFamily">@string/font_medium</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textSize">14sp</item>
+    </style>
     <style name="Button" parent="Widget.AppCompat.Button">
         <item name="android:padding">10dp</item>
         <item name="android:drawablePadding">10dp</item>
